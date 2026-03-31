@@ -1,0 +1,236 @@
+.tc-root {
+  --tc-bg: #111827;
+  --tc-bg-soft: #1f2937;
+  --tc-border: #374151;
+  --tc-border-strong: #4b5563;
+  --tc-text: #e5e7eb;
+  --tc-muted: #9ca3af;
+  --tc-primary: #60a5fa;
+  --tc-primary-strong: #3b82f6;
+  --tc-danger: #f87171;
+  --tc-success: #34d399;
+
+  max-width: 920px;
+  padding: 16px;
+  border: 1px solid var(--tc-border);
+  border-radius: 14px;
+  background: linear-gradient(140deg, #0b1220 0%, var(--tc-bg) 100%);
+  color: var(--tc-text);
+  box-shadow: 0 14px 36px rgb(0 0 0 / 24%);
+}
+
+.tc-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.tc-title {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.tc-meta {
+  font-size: 13px;
+  color: var(--tc-muted);
+}
+
+.tc-filter-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+.tc-field {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.tc-field-inline {
+  display: inline-grid;
+  align-items: center;
+}
+
+.tc-input {
+  width: 100%;
+  border: 1px solid var(--tc-border-strong);
+  background: rgb(17 24 39 / 60%);
+  color: var(--tc-text);
+  border-radius: 8px;
+  min-height: 36px;
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.tc-input:focus {
+  border-color: var(--tc-primary);
+  box-shadow: 0 0 0 3px rgb(96 165 250 / 20%);
+  background: rgb(17 24 39 / 95%);
+}
+
+.tc-input::placeholder {
+  color: #94a3b8;
+}
+
+.tc-toolbar {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tc-root button {
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #293247 0%, #212b3d 100%);
+  color: var(--tc-text);
+  min-height: 36px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease, border-color 120ms ease;
+}
+
+.tc-root button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  border-color: #6b7280;
+}
+
+.tc-root button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.tc-root button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.tc-list {
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.tc-empty {
+  color: var(--tc-muted);
+}
+
+.tc-item {
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgb(31 41 55 / 75%) 0%, rgb(17 24 39 / 85%) 100%);
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+.tc-item:hover {
+  transform: translateY(-1px);
+  border-color: #6b7280;
+}
+
+.tc-item:focus-visible {
+  outline: 2px solid var(--tc-primary);
+  outline-offset: 2px;
+}
+
+.tc-item.is-selected {
+  border-color: var(--tc-primary-strong);
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 18%);
+}
+
+.tc-item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.tc-badge {
+  border: 1px solid rgb(96 165 250 / 35%);
+  background: rgb(59 130 246 / 16%);
+  color: #bfdbfe;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tc-item-description {
+  margin: 6px 0;
+  color: #cbd5e1;
+}
+
+.tc-item-meta {
+  color: #9ca3af;
+}
+
+.tc-pagination {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tc-pagination-state {
+  color: var(--tc-muted);
+  font-size: 13px;
+}
+
+.tc-create {
+  margin-top: 16px;
+  border: 1px solid var(--tc-border);
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  background: rgb(31 41 55 / 30%);
+}
+
+.tc-create legend {
+  color: #cbd5e1;
+  font-size: 12px;
+  padding: 0 6px;
+}
+
+.tc-create-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tc-range {
+  width: 100%;
+  accent-color: var(--tc-success);
+}
+
+.tc-loading {
+  margin-top: 10px;
+  color: #93c5fd;
+}
+
+.tc-error {
+  margin-top: 10px;
+  color: var(--tc-danger);
+}
+
+@media (max-width: 860px) {
+  .tc-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tc-create-grid {
+    grid-template-columns: 1fr;
+  }
+}

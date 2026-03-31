@@ -163,8 +163,8 @@
 .cards-grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 16px;
   padding: 20px 24px;
   align-content: start;
   overflow-y: auto;
@@ -175,7 +175,6 @@
   background: #131328;
   border: 1px solid #1e1e3f;
   border-radius: 10px;
-  overflow: hidden;
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
@@ -233,12 +232,11 @@
 /* ── Card preview zone ───────────────────────────────────── */
 .card-preview {
   flex: 1;
-  padding: 12px;
+  padding: 16px;
   background: #0d0d1a;
   border-top: 1px solid #1e1e3f;
-  min-height: 60px;
-  max-height: 160px;
-  overflow: hidden;
+  min-height: 400px;
+  overflow: auto;
   display: flex;
   align-items: flex-start;
   font-size: 13px;
